@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco Sentry</title>
-    <link rel="icon" href="Imagenes/logo.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="IMG/img/logo.png" type="image/png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css?family=Satisfy|Alegreya|IBM+Plex+Serif|Acme|Ubuntu|Lobster+Two|Martel|Zen+Antique|Zen+Merriweather|Helvetica" rel="stylesheet">
-    <link rel="stylesheet" href="Estilos/DisenoHeaderFooter.css">
-    <link rel="stylesheet" href="Estilos/DisenoBodyServ.css">
-    <link rel="stylesheet" href="Estilos/DisenoAPP.css">
-    <link rel="stylesheet" href="Estilos/disenoportadaCo.css">
-    <link rel="stylesheet" href="Estilos/disenoportadaSUB.css">
-    <link rel="stylesheet" href="Estilos/registro.css">
-    <link rel="stylesheet" href="Estilos/eco-sentry.css">
+    <link rel="stylesheet" href="css/DisenoHeaderFooter.css">
+    <link rel="stylesheet" href="css/DisenoBodyServ.css">
+    <link rel="stylesheet" href="css/DisenoAPP.css">
+    <link rel="stylesheet" href="css/disenoportadaCo.css">
+    <link rel="stylesheet" href="css/disenoportadaSUB.css">
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/eco-sentry.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="bo">
     <header id="header">
         <div class="container-header">
             <div class="logo">
-                <img src="Imagenes/logo.png" alt="Eco Sentry Logo">
+                <img src="IMG/img/logo.png" alt="Eco Sentry Logo">
             </div>
             <nav class="nav">
                 <ul>
@@ -30,47 +30,51 @@
                     <li><a class="desplazar" href="#Soporte" id="Soporte">Soporte al usuario</a></li>
                 </ul>
             </nav>
-            <div class="search-bar">
+            <form class="search-bar">
                 <input type="text" placeholder="Buscar...">
-                <button class="search-button"><img src="Imagenes/lupa.png" alt="Buscar"></button>
-            </div>
+                <button class="search-button"><img src="IMG/img/lupa.png" alt="Buscar"></button>
+            </form>
             <div class="regi">
-                <a href="#" id="Registro"><img src="Imagenes/usuario.png" alt="Usuario"></a>
+                <a href="#" id="Registro"><img src="IMG/img/usuario.png" alt="Usuario"></a>
             </div>
-            <div class="btn-menu" id="btn_menu">
+            <button class="btn-menu" id="btn_menu">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </header>
-    <div class="container__all" id="container_all">
-        <div class="cover">
-            <div class="contenedorcover active" id="Pagina_Inicio">
+    <main class="container__all" id="container_all">
+        <section class="cover">
+            <article class="contenedorcover active" id="Pagina_Inicio">
                 <div class="contenedor_info">
-                    <img class="main-image bordeado" src="Imagenes/monitoring.jpg" alt="Monitoring">
+                    <img class="main-image bordeado" src="IMG/img/monitoring.jpg" alt="Monitoring">
                     <h1 class="main-title">ECO SENTRY</h1>
                     <h2 class="sub-title">Prevenir es proteger: nuestro <br> compromiso contigo.</h2>
                 </div>
-            </div>
-        </div>
-        <div class="body__Page">
-            <div class="section" id="Servicios">
-                <h2 class="title">¡Con Eco Sentry mantente siempre alerta!</h2>
-                <p class="subtitle">Descubre lo que puedes hacer en la plataforma</p>
+            </article>
+        </section>
+        <section class="body__Page">
+            <article id="Servicios">
+                <div class="section-header">
+                    <h2 class="title">¡Con Eco Sentry mantente siempre alerta!</h2>
+                    <p class="subtitle">Descubre lo que puedes hacer en la plataforma</p>
+                </div>
                 <div class="features-container">
                     <div class="features">
-                        <button class="feature-button bordeado"><img src="Imagenes/feature1.png" alt="Característica 1 Icon">Característica 1</button>
-                        <button class="feature-button bordeado"><img src="Imagenes/feature2.png" alt="Característica 2 Icon">Característica 2</button>
-                        <button class="feature-button bordeado"><img src="Imagenes/feature3.png" alt="Característica 3 Icon">Característica 3</button>
-                        <button class="feature-button bordeado"><img src="Imagenes/feature4.png" alt="Característica 4 Icon">Característica 4</button>
+                        <button class="feature-button bordeado"><img src="IMG/img/feature1.png" alt="Característica 1 Icon">Característica 1</button>
+                        <button class="feature-button bordeado"><img src="IMG/img/feature2.png" alt="Característica 2 Icon">Característica 2</button>
+                        <button class="feature-button bordeado"><img src="IMG/img/feature3.png" alt="Característica 3 Icon">Característica 3</button>
+                        <button class="feature-button bordeado"><img src="IMG/img/feature4.png" alt="Característica 4 Icon">Característica 4</button>
                     </div>
-                    <img class="feature-image bordeado" src="Imagenes/feature.jpg" alt="Feature Image">
+                    <img class="feature-image bordeado" src="IMG/img/feature.jpg" alt="Feature Image">
                 </div>
-            </div>
+            </article>
 
-            <div class="section" id="Alertas">
-                <h2 class="title">Beneficios de registrarse</h2>
+            <article id="Alertas">
+                <div class="section-header">
+                    <h2 class="title">Beneficios de registrarse</h2>
+                </div>
                 <div class="benefit-container">
-                    <img class="benefit-image bordeado" src="Imagenes/benefit.jpg" alt="Benefit Image">
+                    <img class="benefit-image bordeado" src="IMG/img/benefit.jpg" alt="Benefit Image">
                     <div class="login-form">
                         <form action="#" method="POST">
                             <h2>Iniciar sesión</h2>
@@ -85,73 +89,81 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="section" id="Artículos">
-                <h2 class="title">Situaciones de emergencia</h2>
+            <article id="Artículos">
+                <div class="section-header">
+                    <h2 class="title">Situaciones de emergencia</h2>
+                </div>
                 <div class="emergency-situations-carousel">
                     <button class="carousel-button prev"><i class="fas fa-arrow-left"></i></button>
                     <div class="emergency-situations">
                         <div class="situation">
-                            <img src="Imagenes/emergency1.jpg" alt="Emergency 1" class="bordeado">
+                            <img src="IMG/img/emergency1.jpg" alt="Emergency 1" class="bordeado">
                             <p class="emergency-text">El ciclón Yaku pone en alerta a Lima</p>
                         </div>
                         <div class="situation">
-                            <img src="Imagenes/emergency2.jpg" alt="Emergency 2" class="bordeado">
+                            <img src="IMG/img/emergency2.jpg" alt="Emergency 2" class="bordeado">
                             <p class="emergency-text">La furia de El Niño Costero en el 2027</p>
                         </div>
                         <div class="situation">
-                            <img src="Imagenes/emergency3.jpg" alt="Emergency 3" class="bordeado">
+                            <img src="IMG/img/emergency3.jpg" alt="Emergency 3" class="bordeado">
                             <p class="emergency-text">La mujer que sobrevivió al huaico</p>
                         </div>
                     </div>
                     <button class="carousel-button next"><i class="fas fa-arrow-right"></i></button>
                 </div>
                 <button class="cta-button bordeado">Empieza a usar el servicio</button>
-            </div>
-        </div>
-    </div>
+            </article>
+        </section>
+    </main>
     <footer>
         <div class="contenedor__footer">
-            <div class="cajaF logo-social">
-                <div class="logoF">
-                    <img src="Imagenes/logo.png" alt="Eco Sentry Logo" class="bordeado" style="width: 60px; height: 60px;">
-                </div>
+            <div class="logo-social">
+                <img src="IMG/img/logo.png" alt="Eco Sentry Logo" class="bordeado" style="width: 60px; height: 60px;">
                 <div class="redes">
-                    <a href="https://www.facebook.com/"><img class="L bordeado" src="Imagenes/facebook.png" alt="" style="width: 24px; height: 24px;"></a>
-                    <a href="https://www.instagram.com/"><img class="L bordeado" src="Imagenes/instagram.png" alt="" style="width: 24px; height: 24px;"></a>
-                    <a href="https://www.tiktok.com/"><img class="L bordeado" src="Imagenes/tiktok.png" alt="" style="width: 24px; height: 24px;"></a>
-                    <a href="https://www.youtube.com/"><img class="L bordeado" src="Imagenes/youtube.png" alt="" style="width: 24px; height: 24px;"></a>
+                    <a href="https://www.facebook.com/"><img class="L bordeado" src="IMG/img/facebook.png" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                    <a href="https://www.instagram.com/"><img class="L bordeado" src="IMG/img/instagram.png" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                    <a href="https://www.tiktok.com/"><img class="L bordeado" src="IMG/img/tiktok.png" alt="TikTok" style="width: 24px; height: 24px;"></a>
+                    <a href="https://www.youtube.com/"><img class="L bordeado" src="IMG/img/youtube.png" alt="YouTube" style="width: 24px; height: 24px;"></a>
                 </div>
             </div>
-            <div class="cajaF">
+            <section>
                 <h2>Acerca de la plataforma</h2>
-                <p>¿Qué es Eco Sentry?</p>
-                <p>Nuestro equipo</p>
-                <p>Los especialistas</p>
-                <p>Misión y Visión</p>
-            </div>
-            <div class="cajaF">
+                <ul>
+                    <li>¿Qué es Eco Sentry?</li>
+                    <li>Nuestro equipo</li>
+                    <li>Los especialistas</li>
+                    <li>Misión y Visión</li>
+                </ul>
+            </section>
+            <section>
                 <h2>Conecta con Eco Sentry</h2>
-                <p>Soporte técnico</p>
-                <p>Políticas del servicio</p>
-                <p>Servicio para autoridades</p>
-                <p>Servicio para ciudadanos</p>
-            </div>
-            <div class="cajaF">
+                <ul>
+                    <li>Soporte técnico</li>
+                    <li>Políticas del servicio</li>
+                    <li>Servicio para autoridades</li>
+                    <li>Servicio para ciudadanos</li>
+                </ul>
+            </section>
+            <section>
                 <h2>Nuestros servicios</h2>
-                <p>Monitoreo meteorológico</p>
-                <p>Alerta en emergencias</p>
-                <p>Sistema de predicción</p>
-                <p>Comunidad</p>
-            </div>
-            <div class="cajaF">
+                <ul>
+                    <li>Monitoreo meteorológico</li>
+                    <li>Alerta en emergencias</li>
+                    <li>Sistema de predicción</li>
+                    <li>Comunidad</li>
+                </ul>
+            </section>
+            <section>
                 <h2>Recursos de aprendizaje</h2>
-                <p>Guía ante emergencias</p>
-                <p>¿Cómo usar la plataforma?</p>
-                <p>Noticias relacionadas</p>
-                <p>Artículos informativos</p>
-            </div>
+                <ul>
+                    <li>Guía ante emergencias</li>
+                    <li>¿Cómo usar la plataforma?</li>
+                    <li>Noticias relacionadas</li>
+                    <li>Artículos informativos</li>
+                </ul>
+            </section>
         </div>
         <div class="caja_line">
             <hr>

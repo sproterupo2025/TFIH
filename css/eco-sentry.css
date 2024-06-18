@@ -147,7 +147,7 @@ header {
 .cover {
     text-align: center;
     padding: 80px 0;
-    background: url('/mnt/data/image.png') no-repeat center center;
+    background: url('IMG/img/ruta_del_icono.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -211,11 +211,20 @@ header {
 }
 
 /* Estilo para el título de las secciones */
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .title {
     font-size: 2rem;
     color: #00bfff;
-    text-align: center;
-    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 1em;
 }
 
 /* Estilo para el contenedor de características */
@@ -434,13 +443,17 @@ header {
 }
 
 /* Efectos de aparición */
-.section {
+.section,
+.situation,
+img {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.section.visible {
+.section.visible,
+.situation.visible,
+img.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -659,6 +672,10 @@ footer .caja_line p {
 .section .subtitle {
     text-align: center; /* Centra el texto */
     margin-bottom: 20px;
+}
+
+.section-header {
+    text-align: center;
 }
 
 #Alertas .title {

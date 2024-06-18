@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-    const sections = document.querySelectorAll('.section');
+    const elements = document.querySelectorAll('.section, .situation, img');
     const options = {
         threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 30); // Faster delay for cascade effect
                 observer.unobserve(entry.target);
             }
         });
     }, options);
 
-    sections.forEach(section => {
-        observer.observe(section);
+    elements.forEach(element => {
+        observer.observe(element);
     });
 
-  
     let previousTitle = document.title;
 
     window.addEventListener('blur', () => {
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.title = previousTitle;
     });
 
-    
     document.querySelectorAll('.nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -41,30 +40,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-  
     const prevButton = document.querySelector('.carousel-button.prev');
     const nextButton = document.querySelector('.carousel-button.next');
-    const carousel = document.querySelector('.emergency-situations');
-    const situationsArray = Array.from(document.querySelectorAll('.situation'));
+    const carousel = document.querySelector('.slide');
+    const situationsArray = Array.from(document.querySelectorAll('.item'));
     let currentIndex = 0;
 
     function updateCarousel() {
-        const itemWidth = situationsArray[0].offsetWidth + 20; 
+        const itemWidth = situationsArray[0].offsetWidth;
         const offset = -currentIndex * itemWidth;
         carousel.style.transform = `translateX(${offset}px)`;
     }
 
     nextButton.addEventListener('click', function () {
-        currentIndex++;
+        currentIndex = (currentIndex + 1) % situationsArray.length;
         updateCarousel();
     });
 
     prevButton.addEventListener('click', function () {
-        currentIndex--;
+        currentIndex = (currentIndex - 1 + situationsArray.length) % situationsArray.length;
         updateCarousel();
     });
 
-  
     const featureButtons = document.querySelectorAll('.feature-button, .read-more, .close-content, .carousel-button, .cta-button');
     featureButtons.forEach(button => {
         button.addEventListener('mouseover', function () {
@@ -75,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    
     const situations = document.querySelectorAll('.situation');
     situations.forEach(situation => {
         const content = situation.querySelector('p');
@@ -119,22 +115,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    
     function handleScroll() {
-        const sections = document.querySelectorAll('.section, .situation');
         const scroll = document.documentElement.scrollTop;
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (scroll > sectionTop - window.innerHeight + sectionHeight / 3) {
-                section.classList.add('visible');
+        elements.forEach((element, index) => {
+            const elementTop = element.offsetTop;
+            const elementHeight = element.offsetHeight;
+            if (scroll > elementTop - window.innerHeight + elementHeight / 3) {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 30); // Faster delay for cascade effect
             } else {
-                section.classList.remove('visible');
+                setTimeout(() => {
+                    element.classList.remove('visible');
+                }, index * 30); // Faster delay for cascade effect
             }
         });
     }
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); 
+    handleScroll();
 });
